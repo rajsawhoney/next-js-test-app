@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 export default function Player() {
+  useEffect(() => {
+    alert("Opening veel player...");
+    window.location.replace("veel-app://dashboards/Feeds");
+  }, []);
   return (
     <div className="flex flex-col w-full h-screen bg-red-500 items-center justify-center">
       <title>Player Page</title>
