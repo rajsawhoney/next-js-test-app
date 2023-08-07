@@ -1,13 +1,50 @@
-"use client";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
+import Layout from "@/components/Layout";
 
-export default function Player() {
+const getDeviceOperatingSystem = () => {
+  const userAgent = navigator.userAgent;
+  if (/android/i.test(userAgent)) {
+    return "Android";
+  }
+
+  if (/iPad|iPhone|iPod/.test(userAgent)) {
+    return "iOS";
+  }
+
+  if (/Macintosh;/.test(userAgent)) {
+    return "Mac";
+  }
+  return "unknown";
+};
+
+export async function getServerSideProps() {
+  const res = await fetch(
+    `https://dev.api.veelapp.com/user/v1.0/contentCategories`
+  );
+  const data = await res.json();
+
+  return { props: { data } };
+}
+
+export default function Player({ data }: { data: object }) {
+  const router = useRouter();
+  const id = router.query.id;
+  console.log("currentVideo:", data);
   useEffect(() => {
-    alert("Opening veel player...");
-    window.location.replace("veel-app://dashboards/Feeds");
+    const device = getDeviceOperatingSystem();
+    switch (device) {
+      case "Android":
+      case "iOS":
+        window.location.replace("veel-app://dashboards/Feeds");
+        break;
+      default:
+        break;
+    }
   }, []);
+
   return (
-    <div className="flex flex-col w-full h-screen bg-red-500 items-center justify-center">
+    <Layout>
       <title>Player Page</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta
@@ -39,7 +76,10 @@ export default function Player() {
         content="https://d3puv92mi2kxt8.cloudfront.net/VeelEnterpriseBanner.mp4"
       />
       <meta property="og:video:type" content="video/mp4" />
-      <h1>This is a Player Screen</h1>
-    </div>
+      <div className="flex flex-col w-screen bg-blue-400 h-screen items-center justify-center">
+        <h1>This is a Player Screen</h1>
+        <h2>Video ID:{id}</h2>
+      </div>
+    </Layout>
   );
 }
