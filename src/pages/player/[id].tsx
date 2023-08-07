@@ -58,8 +58,10 @@ export default function Player({ data }: { data: object }) {
       />
       <meta
         property="og:image"
-        content="https://img.freepik.com/premium-psd/new-modern-glow-effect-video-game-review-youtube-channel-thumbnail-web-banner-premium-psd-templa_623685-102.jpg"
+        content="https://marketplace.canva.com/EAFFt_DccoA/1/0/1600w/canva-colorful-freelancer-youtube-thumbnail-ucA52BZ7Bqk.jpg"
       />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
 
       {/* <!-- Twitter Meta Tags --> */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -75,7 +77,7 @@ export default function Player({ data }: { data: object }) {
       />
       <meta
         name="twitter:image"
-        content="https://img.freepik.com/premium-psd/new-modern-glow-effect-video-game-review-youtube-channel-thumbnail-web-banner-premium-psd-templa_623685-102.jpg"
+        content="https://marketplace.canva.com/EAFFt_DccoA/1/0/1600w/canva-colorful-freelancer-youtube-thumbnail-ucA52BZ7Bqk.jpg"
       />
 
       <div className="flex flex-col w-screen bg-blue-400 h-screen items-center justify-center">
