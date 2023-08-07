@@ -20,9 +20,9 @@ const getDeviceOperatingSystem = () => {
 
 export async function getServerSideProps() {
   const res = await fetch(`https://dev.api.veelapp.com/user/getVideos/12345`);
-  const data = await res.json();
+  // const data = await res.json();
 
-  return { props: { data } };
+  return { props: { data: { id: 1233 } } };
 }
 
 export default function Player({ data }: { data: object }) {
@@ -45,6 +45,7 @@ export default function Player({ data }: { data: object }) {
     <Layout>
       {/* <!-- HTML Meta Tags --> */}
       <title>My Awesome Video Test</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content="My Awesome Video Test Description" />
 
       {/* <!-- Facebook Meta Tags --> */}
