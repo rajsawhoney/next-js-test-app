@@ -9,7 +9,7 @@ export default function Home() {
         <h1>This is a Home Screen</h1>
         <a
           className="px-4 py-4 text-blue-600 text-2xl"
-          href="veelapp-devclient://auth/Login"
+          href="veelapp-devclient://dashboards/Wallet"
         >
           Open App
         </a>
