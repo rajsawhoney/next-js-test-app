@@ -1,6 +1,12 @@
 import Layout from "@/components/Layout";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    window.location.replace(
+      "veelapp-devclient://player/8684d664-381c-4382-ba60-75623e75e444"
+    );
+  }, []);
   return (
     <Layout>
       <title>Home Page</title>
@@ -9,7 +15,7 @@ export default function Home() {
         <h1>This is a Home Screen</h1>
         <a
           className="px-4 py-4 text-blue-600 text-2xl"
-          href="veelapp-devclient://dashboards/Wallet"
+          href="veelapp-devclient://player/8684d664-381c-4382-ba60-75623e75e444"
         >
           Open App
         </a>
