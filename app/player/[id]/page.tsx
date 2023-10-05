@@ -1,6 +1,4 @@
 import { Metadata } from "next";
-import Layout from "@/components/Layout";
-
 // const getDeviceOperatingSystem = () => {
 //   const userAgent = navigator.userAgent;
 //   if (/android/i.test(userAgent)) {
@@ -50,11 +48,9 @@ export default function Player({ params }: { params: { id: string } }) {
   // }, []);
 
   return (
-    <Layout>
-      <div className="flex flex-col w-screen bg-blue-400 h-screen items-center justify-center">
-        <h1>This is a Player Screen</h1>
-        <h2>Video ID:{id}</h2>
-      </div>
-    </Layout>
+    <div className="flex flex-col w-screen bg-blue-400 h-screen items-center justify-center">
+      <h1>This is a Player Screen</h1>
+      <h2>Video ID:{id}</h2>
+    </div>
   );
 }

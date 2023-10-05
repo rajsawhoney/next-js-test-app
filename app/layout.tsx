@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <div className="min-h-screen bg-white font-poppins text-black">
-      {children}
-    </div>
+    <html>
+      <body className="min-h-screen bg-white text-black">{children}</body>
+    </html>
   );
 }
