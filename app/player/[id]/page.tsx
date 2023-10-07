@@ -14,7 +14,14 @@ import { Metadata } from "next";
 //   }
 //   return "unknown";
 // };
+{
+  /* <meta property="al:android:url" content="yourapp://content/path">
+  <meta property="al:android:package" content="com.yourapp.package">
+  <meta property="al:android:app_name" content="Your App Name">
 
+  <!-- Fallback URL for other platforms or if the app is not installed -->
+  <meta property="al:web:url" content="https://www.yourwebsite.com/path"></meta> */
+}
 export const metadata: Metadata = {
   title: "Veel Player",
   description: "Veel Player",
@@ -27,6 +34,10 @@ export const metadata: Metadata = {
     "al:ios:url": "veel-app://dashboards/Feeds",
     "al:ios:app_store_id": "6455370559",
     "al:ios:app_name": "Veel App",
+    "al:android:url": "veel-app://dashboards/Feeds",
+    "al:android:package": "com.veelapp.staging",
+    "al:android:app_name": "Veel App",
+    "al:web:url": "https://veelapp.com",
     "og:url": "veelapp.com",
     "og:image": "https://veelapp.com/assets/veel-white-no-reel-3f54901b.svg",
     "og:type": "website",
