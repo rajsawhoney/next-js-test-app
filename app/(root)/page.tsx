@@ -4,9 +4,9 @@ export default function Home() {
       <h1>This is a Home Screen</h1>
       <a
         className="px-4 py-4 text-blue-600 text-2xl"
-        href="veel-app://player/8684d664-381c-4382-ba60-75623e75e444"
+        href="veelapp-devclient://player/884c8b6e-6e69-41b8-8f29-7921440a7722"
       >
-        Open Video in App
+        Open My Video in App
       </a>
     </div>
   );
